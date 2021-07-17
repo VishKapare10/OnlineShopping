@@ -1,0 +1,48 @@
+D:\TAP\DotnetCore\Day_3\ECommerceSolution\Test\bin\Debug\net5.0\Test.exe
+D:\TAP\DotnetCore\Day_3\ECommerceSolution\Test\bin\Debug\net5.0\Test.deps.json
+D:\TAP\DotnetCore\Day_3\ECommerceSolution\Test\bin\Debug\net5.0\Test.runtimeconfig.json
+D:\TAP\DotnetCore\Day_3\ECommerceSolution\Test\bin\Debug\net5.0\Test.runtimeconfig.dev.json
+D:\TAP\DotnetCore\Day_3\ECommerceSolution\Test\bin\Debug\net5.0\Test.dll
+D:\TAP\DotnetCore\Day_3\ECommerceSolution\Test\bin\Debug\net5.0\ref\Test.dll
+D:\TAP\DotnetCore\Day_3\ECommerceSolution\Test\bin\Debug\net5.0\Test.pdb
+D:\TAP\DotnetCore\Day_3\ECommerceSolution\Test\obj\Debug\net5.0\Test.csprojAssemblyReference.cache
+D:\TAP\DotnetCore\Day_3\ECommerceSolution\Test\obj\Debug\net5.0\Test.GeneratedMSBuildEditorConfig.editorconfig
+D:\TAP\DotnetCore\Day_3\ECommerceSolution\Test\obj\Debug\net5.0\Test.AssemblyInfoInputs.cache
+D:\TAP\DotnetCore\Day_3\ECommerceSolution\Test\obj\Debug\net5.0\Test.AssemblyInfo.cs
+D:\TAP\DotnetCore\Day_3\ECommerceSolution\Test\obj\Debug\net5.0\Test.csproj.CoreCompileInputs.cache
+D:\TAP\DotnetCore\Day_3\ECommerceSolution\Test\obj\Debug\net5.0\Test.dll
+D:\TAP\DotnetCore\Day_3\ECommerceSolution\Test\obj\Debug\net5.0\ref\Test.dll
+D:\TAP\DotnetCore\Day_3\ECommerceSolution\Test\obj\Debug\net5.0\Test.pdb
+D:\TAP\DotnetCore\Day_3\ECommerceSolution\Test\obj\Debug\net5.0\Test.genruntimeconfig.cache
+D:\OnlineShopping\ECommerceSolution\Test\bin\Debug\net5.0\Test.exe
+D:\OnlineShopping\ECommerceSolution\Test\bin\Debug\net5.0\Test.deps.json
+D:\OnlineShopping\ECommerceSolution\Test\bin\Debug\net5.0\Test.runtimeconfig.json
+D:\OnlineShopping\ECommerceSolution\Test\bin\Debug\net5.0\Test.runtimeconfig.dev.json
+D:\OnlineShopping\ECommerceSolution\Test\bin\Debug\net5.0\Test.dll
+D:\OnlineShopping\ECommerceSolution\Test\bin\Debug\net5.0\ref\Test.dll
+D:\OnlineShopping\ECommerceSolution\Test\bin\Debug\net5.0\Test.pdb
+D:\OnlineShopping\ECommerceSolution\Test\obj\Debug\net5.0\Test.csprojAssemblyReference.cache
+D:\OnlineShopping\ECommerceSolution\Test\obj\Debug\net5.0\Test.GeneratedMSBuildEditorConfig.editorconfig
+D:\OnlineShopping\ECommerceSolution\Test\obj\Debug\net5.0\Test.AssemblyInfoInputs.cache
+D:\OnlineShopping\ECommerceSolution\Test\obj\Debug\net5.0\Test.AssemblyInfo.cs
+D:\OnlineShopping\ECommerceSolution\Test\obj\Debug\net5.0\Test.csproj.CoreCompileInputs.cache
+D:\OnlineShopping\ECommerceSolution\Test\obj\Debug\net5.0\Test.dll
+D:\OnlineShopping\ECommerceSolution\Test\obj\Debug\net5.0\ref\Test.dll
+D:\OnlineShopping\ECommerceSolution\Test\obj\Debug\net5.0\Test.pdb
+D:\OnlineShopping\ECommerceSolution\Test\obj\Debug\net5.0\Test.genruntimeconfig.cache
+D:\OnlineShopping\Console Application\Test\bin\Debug\net5.0\Test.exe
+D:\OnlineShopping\Console Application\Test\bin\Debug\net5.0\Test.deps.json
+D:\OnlineShopping\Console Application\Test\bin\Debug\net5.0\Test.runtimeconfig.json
+D:\OnlineShopping\Console Application\Test\bin\Debug\net5.0\Test.runtimeconfig.dev.json
+D:\OnlineShopping\Console Application\Test\bin\Debug\net5.0\Test.dll
+D:\OnlineShopping\Console Application\Test\bin\Debug\net5.0\ref\Test.dll
+D:\OnlineShopping\Console Application\Test\bin\Debug\net5.0\Test.pdb
+D:\OnlineShopping\Console Application\Test\obj\Debug\net5.0\Test.csprojAssemblyReference.cache
+D:\OnlineShopping\Console Application\Test\obj\Debug\net5.0\Test.GeneratedMSBuildEditorConfig.editorconfig
+D:\OnlineShopping\Console Application\Test\obj\Debug\net5.0\Test.AssemblyInfoInputs.cache
+D:\OnlineShopping\Console Application\Test\obj\Debug\net5.0\Test.AssemblyInfo.cs
+D:\OnlineShopping\Console Application\Test\obj\Debug\net5.0\Test.csproj.CoreCompileInputs.cache
+D:\OnlineShopping\Console Application\Test\obj\Debug\net5.0\Test.dll
+D:\OnlineShopping\Console Application\Test\obj\Debug\net5.0\ref\Test.dll
+D:\OnlineShopping\Console Application\Test\obj\Debug\net5.0\Test.pdb
+D:\OnlineShopping\Console Application\Test\obj\Debug\net5.0\Test.genruntimeconfig.cache

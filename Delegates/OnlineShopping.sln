@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentProcessing", "Paymen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventTest", "EventTest\EventTest.csproj", "{C52E1283-07C8-4F2D-9287-571498383F32}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializationTest", "SerializationTest\SerializationTest.csproj", "{EEC56BF7-B052-4D46-9CDB-CC4EAE6040F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -128,5 +130,17 @@ Global
 		{C52E1283-07C8-4F2D-9287-571498383F32}.Release|x64.Build.0 = Release|Any CPU
 		{C52E1283-07C8-4F2D-9287-571498383F32}.Release|x86.ActiveCfg = Release|Any CPU
 		{C52E1283-07C8-4F2D-9287-571498383F32}.Release|x86.Build.0 = Release|Any CPU
+		{EEC56BF7-B052-4D46-9CDB-CC4EAE6040F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEC56BF7-B052-4D46-9CDB-CC4EAE6040F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEC56BF7-B052-4D46-9CDB-CC4EAE6040F7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EEC56BF7-B052-4D46-9CDB-CC4EAE6040F7}.Debug|x64.Build.0 = Debug|Any CPU
+		{EEC56BF7-B052-4D46-9CDB-CC4EAE6040F7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EEC56BF7-B052-4D46-9CDB-CC4EAE6040F7}.Debug|x86.Build.0 = Debug|Any CPU
+		{EEC56BF7-B052-4D46-9CDB-CC4EAE6040F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEC56BF7-B052-4D46-9CDB-CC4EAE6040F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEC56BF7-B052-4D46-9CDB-CC4EAE6040F7}.Release|x64.ActiveCfg = Release|Any CPU
+		{EEC56BF7-B052-4D46-9CDB-CC4EAE6040F7}.Release|x64.Build.0 = Release|Any CPU
+		{EEC56BF7-B052-4D46-9CDB-CC4EAE6040F7}.Release|x86.ActiveCfg = Release|Any CPU
+		{EEC56BF7-B052-4D46-9CDB-CC4EAE6040F7}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

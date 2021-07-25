@@ -7,24 +7,7 @@ using MySql.Data.MySqlClient;
 
 namespace AnalyticsTest
 {
-    public class Person{
-        public string FirstName {get;set;}
-        public string LastName {get;set;}
-        public int Age {get;set;}
-    }
-    public class Product
-    {
-        public  int Likes{get;set;}
-        public int Id{get;set;}
-        public string Title {get;set;}
-        public string Description{get;set;}
-        public string ImageUrl { get; set;}
 
-        public string Category { get; set;} 
-        public double UnitPrice{ get; set;}
-        public int Quantity{get;set;}
-
-    }
     class Program
     {
         static void FindAllNumbersDividedby2(){
@@ -157,19 +140,18 @@ namespace AnalyticsTest
 
         public static IEnumerable<Product> GetAllProducts(){
             List<Product> allProducts=new List<Product>();
-            allProducts.Add(new Product{Id= 101,Title="Gerbera",Quantity=20000,Description="Beautiful Flower",Category="Flower",UnitPrice=30,Likes=11000,ImageUrl="images/Gerbera.jpg"});
-            allProducts.Add(new Product{Id= 102,Title="Tulip",Quantity=20500,Description="Kashmiri Flower",Category="Flower",UnitPrice=150,Likes=75000,ImageUrl="images/Tulip.jpg"});
-            allProducts.Add(new Product{Id= 101,Title="Rose",Quantity=20050,Description="Wedding Flower",Category="Flower",UnitPrice=50,Likes=45600,ImageUrl="images/Rose.jpg"});
-            allProducts.Add(new Product{Id= 101,Title="Jasmine",Quantity=23000,Description="Beautiful Flower",Category="Flower",UnitPrice=55,Likes=35000,ImageUrl="images/Jasmine.jpg"});
-            allProducts.Add(new Product{Id= 101,Title="Lily",Quantity=0,Description="Beautiful Flower",Category="Flower",UnitPrice=100,Likes=45000,ImageUrl="images/Lily.jpg"});
-            allProducts.Add(new Product{Id= 101,Title="Croton",Quantity=25000,Description="Indoor Plant",Category="Plant",UnitPrice=60,Likes=19000,ImageUrl="images/Croton.jpg"});
-            allProducts.Add(new Product{Id= 101,Title="Coconut",Quantity=24000,Description="Best tree",Category="Tree",UnitPrice=80,Likes=18000,ImageUrl="images/Coconut.jpg"});
-            allProducts.Add(new Product{Id= 101,Title="Mango",Quantity=21000,Description="Best fruit",Category="Fruit",UnitPrice=90,Likes=16000,ImageUrl="images/Mango.jpg"});
+            allProducts.Add(new Product{ID= 101,Title="Gerbera",Quantity=20000,Description="Beautiful Flower",Category="Flower",UnitPrice=30,Likes=11000,ImageUrl="images/Gerbera.jpg"});
+            allProducts.Add(new Product{ID= 102,Title="Tulip",Quantity=20500,Description="Kashmiri Flower",Category="Flower",UnitPrice=150,Likes=75000,ImageUrl="images/Tulip.jpg"});
+            allProducts.Add(new Product{ID= 101,Title="Rose",Quantity=20050,Description="Wedding Flower",Category="Flower",UnitPrice=50,Likes=45600,ImageUrl="images/Rose.jpg"});
+            allProducts.Add(new Product{ID= 101,Title="Jasmine",Quantity=23000,Description="Beautiful Flower",Category="Flower",UnitPrice=55,Likes=35000,ImageUrl="images/Jasmine.jpg"});
+            allProducts.Add(new Product{ID= 101,Title="Lily",Quantity=0,Description="Beautiful Flower",Category="Flower",UnitPrice=100,Likes=45000,ImageUrl="images/Lily.jpg"});
+            allProducts.Add(new Product{ID= 101,Title="Croton",Quantity=25000,Description="Indoor Plant",Category="Plant",UnitPrice=60,Likes=19000,ImageUrl="images/Croton.jpg"});
+            allProducts.Add(new Product{ID= 101,Title="Coconut",Quantity=24000,Description="Best tree",Category="Tree",UnitPrice=80,Likes=18000,ImageUrl="images/Coconut.jpg"});
+            allProducts.Add(new Product{ID= 101,Title="Mango",Quantity=21000,Description="Best fruit",Category="Fruit",UnitPrice=90,Likes=16000,ImageUrl="images/Mango.jpg"});
 
             return allProducts;
         }
          public static IEnumerable<Product> GetAllProductsFromMySqlDatabase(){
-            List<Product> allProducts=new List<Product>();
             //Data Access Logic
             //Querying against mySQL Database.
             /*3. understand Data Object Model for database connectivity
@@ -195,9 +177,32 @@ namespace AnalyticsTest
             7.Create Collection of products by fetching data from result set
             8.Close connection
             */
-            string connectionString = @"server=127.0.0.1;Uid=root;database=tap;Pwd=Know@9999#";
-            MySqlConnection connection=new MySqlConnection(connectionString);
-            
+            List<Product> allProducts=new List<Product>();
+            string connStr = @"server=127.0.0.1;Uid=root;database=tap;Pwd=Know@9999#";
+            //SOLID: D: Dependency Injection 
+            MySqlConnection conn=new MySqlConnection(connStr);
+            try{
+                //Create instance of command class
+                string query= "select * from tap.flowers";
+                MySqlCommand command = new MySqlCommand(query,conn);
+                //Open the connection
+                conn.Open();
+                //Execute command
+                MySqlDataReader reader= command.ExecuteReader();
+                //Read the data
+                while(reader.Read()){
+                    //new Product{ Id=reader[0].ToString(), Title=reader[1],Description=reader[2]};
+                    Console.WriteLine(reader[0]+"---"+reader[1]+"---"+reader[2]);
+                }
+                reader.Close();
+
+            }
+            catch(Exception ex){
+                Console.WriteLine(ex.Message);
+            }
+            finally{
+                conn.Close();
+            }
             return allProducts;
         }
 
@@ -275,7 +280,7 @@ namespace AnalyticsTest
         }
         static void Main(string[] args)
         {
-            FindAllNumbersDividedby2();
+            /*FindAllNumbersDividedby2();
             ShowAllNames();
             GetReport();
             TakeThree();
@@ -290,6 +295,11 @@ namespace AnalyticsTest
             Console.WriteLine("Sold out products");
             IEnumerable<Product> soldOutProducts=GetSoldOutProducts();
             foreach(Product theProduct in soldOutProducts){
+                Console.WriteLine(theProduct.Title+" "+theProduct.UnitPrice+" "+theProduct.Quantity);
+            }*/
+            //IEnumerable<Product> products = GetAllProductsFromMySqlDatabase();
+            IEnumerable<Product> products=ProductsDBManager.GetAll();
+            foreach(Product theProduct in products){
                 Console.WriteLine(theProduct.Title+" "+theProduct.UnitPrice+" "+theProduct.Quantity);
             }
         }

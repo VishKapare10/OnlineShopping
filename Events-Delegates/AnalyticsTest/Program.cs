@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
+using MySql.Data;
+using MySql.Data.MySqlClient;
+//using MySqlConnector;
 
 namespace AnalyticsTest
 {
@@ -165,12 +168,52 @@ namespace AnalyticsTest
 
             return allProducts;
         }
-         public static IEnumerable<Product> GetAllProductsFromDatabase(){
+         public static IEnumerable<Product> GetAllProductsFromMySqlDatabase(){
+            List<Product> allProducts=new List<Product>();
+            //Data Access Logic
+            //Querying against mySQL Database.
+            /*3. understand Data Object Model for database connectivity
+			Connection :	establish connection with database
+				   :    connection string
+
+			Command	   : command string, command type
+			CommandBuilder :
+			DataReader : read data like cursor
+				    forward only recordset
+			Adpater:    helping to fetch data in offline mode
+			DataSet:    collection of Data Tables
+			DataTable:  collection of Rows
+			DataRow :   actual record */
+            //ADO .NET object model
+            /*
+            1. Define connection string
+            2.Create instance of Connection class
+            3.Create instance of Command class
+            4.Open connection
+            5. Execute Command
+            6. Get result set and iterate result set using foreach loop
+            7.Create Collection of products by fetching data from result set
+            8.Close connection
+            */
+            string connectionString = @"server=127.0.0.1;Uid=root;database=tap;Pwd=Know@9999#";
+            MySqlConnection connection=new MySqlConnection(connectionString);
+            
+            return allProducts;
+        }
+
+           public static IEnumerable<Product> GetAllProductsFromMongoDBDatabase(){
             List<Product> allProducts=new List<Product>();
             //Data Access Logic
             //Querying against mySQL Database.
             return allProducts;
         }
+
+        public static IEnumerable<Product> GetAllProductsFromOracleDatabase(){
+                    List<Product> allProducts=new List<Product>();
+                    //Data Access Logic
+                    //Querying against mySQL Database.
+                    return allProducts;
+                }
 
         public static IEnumerable<Product> GetAllProductsFromJSONFile(){
             List<Product> allProducts=new List<Product>();

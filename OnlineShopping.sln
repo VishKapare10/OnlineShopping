@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisconnectedDataAccessTest"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDBTestCRUDApp", "MongoDBTestCRUDApp\MongoDBTestCRUDApp.csproj", "{0641F881-95D8-4DF4-BF34-F012FC6260DD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentsMongodbCRUDTest", "StudentsMongodbCRUDTest\StudentsMongodbCRUDTest.csproj", "{B77931B9-3B36-4D7C-BBC8-AE5CA5A97EF3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -226,5 +228,17 @@ Global
 		{0641F881-95D8-4DF4-BF34-F012FC6260DD}.Release|x64.Build.0 = Release|Any CPU
 		{0641F881-95D8-4DF4-BF34-F012FC6260DD}.Release|x86.ActiveCfg = Release|Any CPU
 		{0641F881-95D8-4DF4-BF34-F012FC6260DD}.Release|x86.Build.0 = Release|Any CPU
+		{B77931B9-3B36-4D7C-BBC8-AE5CA5A97EF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B77931B9-3B36-4D7C-BBC8-AE5CA5A97EF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B77931B9-3B36-4D7C-BBC8-AE5CA5A97EF3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B77931B9-3B36-4D7C-BBC8-AE5CA5A97EF3}.Debug|x64.Build.0 = Debug|Any CPU
+		{B77931B9-3B36-4D7C-BBC8-AE5CA5A97EF3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B77931B9-3B36-4D7C-BBC8-AE5CA5A97EF3}.Debug|x86.Build.0 = Debug|Any CPU
+		{B77931B9-3B36-4D7C-BBC8-AE5CA5A97EF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B77931B9-3B36-4D7C-BBC8-AE5CA5A97EF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B77931B9-3B36-4D7C-BBC8-AE5CA5A97EF3}.Release|x64.ActiveCfg = Release|Any CPU
+		{B77931B9-3B36-4D7C-BBC8-AE5CA5A97EF3}.Release|x64.Build.0 = Release|Any CPU
+		{B77931B9-3B36-4D7C-BBC8-AE5CA5A97EF3}.Release|x86.ActiveCfg = Release|Any CPU
+		{B77931B9-3B36-4D7C-BBC8-AE5CA5A97EF3}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

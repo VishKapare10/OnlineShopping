@@ -1,4 +1,8 @@
- namespace Catalog
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Catalog
 {
 
 
@@ -82,7 +86,6 @@
                 new {Name="Neha",Score = 82},
             };
             var scoreRecordsDict=scoreRecords.ToDictionary(sr => sr.Name);
-            return scoreRecordsDict;
 
         }
 
@@ -129,7 +132,7 @@
         
         public  static IEnumerable<Product> GetSoldOutProducts(){
                 IEnumerable<Product> products= GetAllProducts();
-                var soldOutProducts=from prod in products where  prod.Quantity = 0 select prod;
+                var soldOutProducts=from prod in products where prod.Quantity == 0 select prod;
                 return soldOutProducts; 
         }
 
@@ -148,19 +151,19 @@
                 return productInfos;
         }
 
-        public  static IEnumerable<Product> GetProductsDistinct(){
+        public  static List<string> GetProductsDistinct(){
                 IEnumerable<Product> products= GetAllProducts();
                 var uniqueItems=(from prod in products 
                                              select prod.Title).Distinct();
                                             
-                return uniqueItems; 
+                return uniqueItems as List<string>;
         }
 
-        public  static IEnumerable<Product> GetProductsCount(){
+        public  static dynamic GetProductsCount(){
                 IEnumerable<Product> products= GetAllProducts();
                 var categoryCounts=from prod in products 
                                  group prod by prod.Category into prodGroup
-                                 select new { Category = prodGroup.key, GetProductsCount=prodGroup.Count()};
+                                 select new { Category = prodGroup.Key, GetProductsCount=prodGroup.Count()};
                                             
                 return categoryCounts; 
         }

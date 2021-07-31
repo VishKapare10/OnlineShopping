@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentsMongodbCRUDTest", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecruitmentApp", "RecruitmentApp\RecruitmentApp.csproj", "{7D314B78-2D33-471E-9BD3-50D9D0C63FD8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLIDTest", "SOLIDTest\SOLIDTest.csproj", "{F483548B-1CB5-4B67-9021-D10A66F4B7C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -254,5 +256,17 @@ Global
 		{7D314B78-2D33-471E-9BD3-50D9D0C63FD8}.Release|x64.Build.0 = Release|Any CPU
 		{7D314B78-2D33-471E-9BD3-50D9D0C63FD8}.Release|x86.ActiveCfg = Release|Any CPU
 		{7D314B78-2D33-471E-9BD3-50D9D0C63FD8}.Release|x86.Build.0 = Release|Any CPU
+		{F483548B-1CB5-4B67-9021-D10A66F4B7C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F483548B-1CB5-4B67-9021-D10A66F4B7C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F483548B-1CB5-4B67-9021-D10A66F4B7C1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F483548B-1CB5-4B67-9021-D10A66F4B7C1}.Debug|x64.Build.0 = Debug|Any CPU
+		{F483548B-1CB5-4B67-9021-D10A66F4B7C1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F483548B-1CB5-4B67-9021-D10A66F4B7C1}.Debug|x86.Build.0 = Debug|Any CPU
+		{F483548B-1CB5-4B67-9021-D10A66F4B7C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F483548B-1CB5-4B67-9021-D10A66F4B7C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F483548B-1CB5-4B67-9021-D10A66F4B7C1}.Release|x64.ActiveCfg = Release|Any CPU
+		{F483548B-1CB5-4B67-9021-D10A66F4B7C1}.Release|x64.Build.0 = Release|Any CPU
+		{F483548B-1CB5-4B67-9021-D10A66F4B7C1}.Release|x86.ActiveCfg = Release|Any CPU
+		{F483548B-1CB5-4B67-9021-D10A66F4B7C1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

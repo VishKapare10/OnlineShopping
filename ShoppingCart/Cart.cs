@@ -1,43 +1,36 @@
 ﻿using System;
-using System.Collections;
+using System.Collections.Generic;
 
 namespace ShoppingCart
 {
     public class Cart 
     {
-     
-        public List<CartItem> Items { get; private set; }
-        
-        // Readonly properties can only be set in initialization or in a constructor
+        public List<Item> Items =new List<Item>();
         public static readonly Cart Instance;
     
-        // A protected constructor ensures that an object can't be created from outside
-        protected Cart() { }
-    
-        
-        public void AddItem(int productId) {
-            // Create a new item to add to the cart
-            Item newItem = new Item(productId);
-    
+        public  Cart() { }
+            
+        public void Add(Item newItem) {
+           
             // If this item already exists in our list of items, increase the quantity
             // Otherwise, add the new item to the list
             if (Items.Contains(newItem)) {
-                foreach (CartItem item in Items) {
-                    if (item.Equals(newItem)) {
-                        item.Quantity++;
+                foreach (Item theItem in Items) {
+                    if (theItem.Equals(newItem)) {
+                        theItem.Quantity++;
                         return;
                     }
                 }
             } else {
-                newItem.Quantity = 1;
+                
                 Items.Add(newItem);
             }
         }
     
-        /**
-        * SetItemQuantity() - Changes the quantity of an item in the cart
-        */
-        public void SetItemQuantity(int productId, int quantity) {
+        
+        // SetItemQuantity() - Changes the quantity of an item in the cart
+        
+     /*   public void SetItemQuantity(int productId, int quantity) {
             // If we are setting the quantity to 0, remove the item entirely
             if (quantity == 0) {
                 RemoveItem(productId);
@@ -45,7 +38,7 @@ namespace ShoppingCart
             }
     
             // Find the item and update the quantity
-            Item updatedItem = new Item(productId);
+            Item updatedItem = new Item{ new Product{ Id=productId}};
     
             foreach (Item item in Items) {
                 if (item.Equals(updatedItem)) {
@@ -54,26 +47,23 @@ namespace ShoppingCart
                 }
             }
         }
-    
-        /**
-        * RemoveItem() - Removes an item from the shopping cart
-        */
-        public void RemoveItem(int productId) {
-            CartItem removedItem = new CartItem(productId);
-            Items.Remove(removedItem);
+    */
+
+        // RemoveItem() - Removes an item from the shopping cart
+        
+        public void RemoveItem(int productId) {   
+            var found = Items.Find(x => x.ProductId == productId);
+            if(found != null) Items.Remove(found);
         }
     
-    
-        /**
-        * GetSubTotal() - returns the total price of all of the items
-        *                 before tax, shipping, etc.
-        */
-        public decimal GetSubTotal() {
-            decimal subTotal = 0;
-            foreach (CartItem item in Items)
-                subTotal += item.TotalPrice;
+  
+        // GetSubTotal() - returns the total price of all of the items
+        /*public double GetSubTotal() {
+            double subTotal = 0;
+            foreach (Item item in Items)
+                subTotal += item.UnitPrice * item.Quantity;
     
             return subTotal;
-        }
+        }*/
     }
 }

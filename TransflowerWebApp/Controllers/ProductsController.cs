@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using TransflowerWebApp.Models;
+using Catalog;
 
 namespace TransflowerWebApp.Controllers
 {
@@ -20,7 +21,7 @@ namespace TransflowerWebApp.Controllers
 
         public IActionResult Index()
         {
-            List <string> products=new List<string>();
+            /*List <string> products=new List<string>();
             products.Add("Lotus");
             products.Add("Carnation");
             products.Add("Jasmine");
@@ -29,16 +30,17 @@ namespace TransflowerWebApp.Controllers
             products.Add("Tulip");
             products.Add("Lily");
             ViewData["allProducts"]=products;
-            return View();
+            return View();*/
 
-            /*List<Product>allProducts=Catalog.ProductManager.GetAllProducts();
-            this.ViewData["products"]=allProducts;*/
+            List<Product> allProducts=Catalog.ProductManager.GetAllProducts();
+            this.ViewData["products"]=allProducts;
+            return View();
         }
 
-        public IActionResult Details()
+        public IActionResult Details(int id)
         {
-            /*Product product=  Catalog.ProductManager.Get(id);
-            ViewData["details"]=product;*/
+            Product Product=  Catalog.ProductManager.Get(id);
+            this.ViewData["product"]=Product;
             return View();
         }
 
@@ -50,6 +52,13 @@ namespace TransflowerWebApp.Controllers
         public IActionResult Update()
         {
             return View();
+        }
+
+        
+        public IActionResult Delete(int id)
+        {
+            ProductManager.Delete(id);
+            return RedirectToAction("Index");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -28,13 +28,17 @@ namespace CRM
                     string name = reader["Name"].ToString();
                     string Email = reader["Email"].ToString();
                     string contactNumber = reader["ContactNumber"].ToString();
-     
+                    string location = reader["Location"].ToString();
+                    int age=int.Parse(reader["Age"].ToString());
+
                     customers.Add(new Customer()
                     {
                         Id = id,
                         Name = name,
                         Email = Email,
-                        ContactNumber = contactNumber
+                        ContactNumber = contactNumber,
+                        Location=location,
+                        Age=age
                     });
                 }
                 reader.Close();
@@ -76,13 +80,18 @@ namespace CRM
                     string name = reader["Name"].ToString();
                     string Email = reader["Email"].ToString();
                     string contactNumber = reader["ContactNumber"].ToString();
-     
+                    string location = reader["Location"].ToString();
+                    int age=int.Parse(reader["Age"].ToString());
+
+
                     theCustomer=new Customer()
                     {
                         Id = id,
                         Name = name,
                         Email = Email,
-                        ContactNumber = contactNumber
+                        ContactNumber = contactNumber,
+                        Location=location,
+                        Age=age
                     };
 
                 }
@@ -126,13 +135,15 @@ namespace CRM
                     if (con.State == ConnectionState.Closed)
                     con.Open();
 
-                    string query = "UPDATE customer SET Name=@Name , Email=@Email, " +
-                                    "ContactNumber=@ContactNumber " +      "WHERE Id=@Id";
+                    string query = "UPDATE tap.customers SET Name=@Name , Email=@Email, " +
+                                    "ContactNumber=@ContactNumber " +    "WHERE Id=@Id";
                     MySqlCommand cmd = new MySqlCommand(query, con);
                     cmd.Parameters.Add(new MySqlParameter("@Id", customer.Id));
-                    cmd.Parameters.Add(new MySqlParameter("@Title", customer.Name));
-                    cmd.Parameters.Add(new MySqlParameter("@Description", customer.ContactNumber));
-                    cmd.Parameters.Add(new MySqlParameter("@Image", customer.Email));
+                    cmd.Parameters.Add(new MySqlParameter("@Name", customer.Name));
+                    cmd.Parameters.Add(new MySqlParameter("@ContactNumber", customer.ContactNumber));
+                    cmd.Parameters.Add(new MySqlParameter("@Email", customer.Email));
+                    /*cmd.Parameters.Add(new MySqlParameter("@Location",customer.Location));
+                    cmd.Parameters.Add(new MySqlParameter("@Age",customer.Age));*/
                     
                     cmd.ExecuteNonQuery();  // DML Operation
                     if (con.State == ConnectionState.Open)
@@ -158,10 +169,12 @@ namespace CRM
                     string query = "INSERT INTO customers (Id,Name, Email, ContactNumber) " +
                                     "VALUES (@Id, @Name, @ContactNumber)";
                     MySqlCommand cmd = new MySqlCommand(query, con);
-                     cmd.Parameters.Add(new MySqlParameter("@Id", customer.Id));
+                    cmd.Parameters.Add(new MySqlParameter("@Id", customer.Id));
                     cmd.Parameters.Add(new MySqlParameter("@Name", customer.Name));
                     cmd.Parameters.Add(new MySqlParameter("@ContactNumber", customer.ContactNumber));
                     cmd.Parameters.Add(new MySqlParameter("@Email", customer.Email));
+                    cmd.Parameters.Add(new MySqlParameter("@Location",customer.Location));
+                    cmd.Parameters.Add(new MySqlParameter("@Age",customer.Age));
                       cmd.ExecuteNonQuery();// DML
                     if (con.State == ConnectionState.Open)
                         con.Close();

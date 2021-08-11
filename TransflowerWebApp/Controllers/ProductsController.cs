@@ -44,16 +44,41 @@ namespace TransflowerWebApp.Controllers
             return View();
         }
 
+        //GET Request for insert
+        [HttpGet]
         public IActionResult Insert()
         {
             return View();
         }
 
-        public IActionResult Update()
+        [HttpPost]
+        public IActionResult Insert(int id,string title, string description,int quantity, double unitprice, string imageUrl)
         {
-            return View();
+            Product product=new Product(){
+                Id=id,
+                Title=title,
+                Description=description,
+                Quantity=quantity,
+                UnitPrice=unitprice,
+                ImageUrl=imageUrl
+            };
+            ProductManager.Insert(product);
+            return View();  
         }
 
+        [HttpGet]
+        public IActionResult Update(int id)
+        {
+            Product product = ProductManager.Get(id);
+            return View(product);  
+        }
+
+        [HttpPost]
+        public IActionResult Update(Product modifiedProduct)   /// best practice to send or receive data is using model binding
+        {
+           ProductManager.Update(modifiedProduct);// send data to BLL----DAL----database
+           return RedirectToAction("index","products"); 
+        }
         
         public IActionResult Delete(int id)
         {

@@ -33,6 +33,7 @@ namespace webApp
             {
                 endpoints.MapGet("/", async context =>
                 {
+                    
                      Thread theThread = Thread.CurrentThread;
                     Console.WriteLine("default ="+theThread.ManagedThreadId);  
                     await context.Response.WriteAsync("Hello World!");
@@ -50,6 +51,10 @@ namespace webApp
                     Thread theThread = Thread.CurrentThread;
                     Console.WriteLine("/contact ="+theThread.ManagedThreadId);  
                     await context.Response.WriteAsync("Contact No. 7720037983");
+                });
+
+                endpoints.MapGet("/dotnet", async context => {
+                    await context.Response.WriteAsync("Dotnet 5.0 full stack");
                 });
             });
         }

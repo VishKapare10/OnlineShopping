@@ -12,6 +12,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
+using ProductsWebAPI.Services;
+using ProductsWebAPI.Repositories;
+
 namespace ProductsWebAPI
 {
     public class Startup
@@ -26,7 +29,7 @@ namespace ProductsWebAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddTransient<IProductService,ProductService>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

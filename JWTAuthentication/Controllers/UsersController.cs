@@ -1,85 +1,59 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using WebApi.Services;
-using WebApi.Models;
-//using MailKit.Net.Smtp;
-//using MimeKit;
+using WebApi.Entities;
+using System;
 
 namespace JWTAuthentication.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class UsersController : ControllerBase
     {
-        private IUserService _userService;
+          private IUserService _userService;
 
         public UsersController(IUserService userService)
         {
             _userService = userService;
         }
 
+        [AllowAnonymous]
         [HttpPost("authenticate")]
-        public IActionResult Authenticate(AuthenticateRequest model)
+        public IActionResult Authenticate([FromBody]AuthenticateModel model)
         {
-            var response = _userService.Authenticate(model);
+            Console.WriteLine("authenticate is called.");
+            
+            var user = _userService.Authenticate(model.Username, model.Password);
 
-            if (response == null)
+            if (user == null)
                 return BadRequest(new { message = "Username or password is incorrect" });
-            return Ok(response);
+
+            return Ok(user);
         }
 
-        [Authorize]
+        [Authorize(Roles = Role.Admin)]
         [HttpGet]
         public IActionResult GetAll()
         {
-            var users = _userService.GetAll();
+            var users =  _userService.GetAll();
             return Ok(users);
         }
-   
-        /*[HttpPost]  
-        public ActionResult SendMessage()  
-        {  
-        
-            MimeMessage message = new MimeMessage();
 
-            MailboxAddress from = new MailboxAddress("Admin", "admin@example.com");
-            message.From.Add(from);
+        [HttpGet("{id}")]
+        public IActionResult GetById(int id)
+        {
+            // only allow admins to access other user records
+            var currentUserId = int.Parse(User.Identity.Name);
+            if (id != currentUserId && !User.IsInRole(Role.Admin))
+                return Forbid();
 
-            MailboxAddress to = new MailboxAddress("User", "user@example.com");
-            message.To.Add(to);
+            var user =  _userService.GetById(id);
 
-            message.Subject = "This is email subject";
-            
-            BodyBuilder bodyBuilder = new BodyBuilder();
-            bodyBuilder.HtmlBody = "<h1>Hello World!</h1>";
-            bodyBuilder.TextBody = "Hello World!";
-        /*  var attachment = new Attachment("profile.jpg", MediaTypeNames.Image.Jpeg);
-            mailMessage.Attachments.Add(attachment); */
-            //bodyBuilder.Attachments.Add(env.WebRootPath + "\\file.png");
-           /* message.Body = bodyBuilder.ToMessageBody();
+            if (user == null)
+                return NotFound();
 
-
-            SmtpClient client = new SmtpClient();
-            client.Connect("smtp.gmail.com", 587, true);
-            client.Authenticate("ravi.tambade@transflower.in", "pwd_here");
-
-            client.Send(message);
-            client.Disconnect(true);
-            client.Dispose();
-
-            return Ok();
-        }*/  
-
-        [HttpPost]  
-        public ActionResult SendSMSMessage()  
-            {  
-                /* Message message=new Message();
-                var results = SMS.Send(new SMS.SMSRequest  
-                {  
-                    from = Configuration.Instance.Settings["appsettings:NEXMO_FROM_NUMBER"],  
-                    to = message.To,  
-                    text = message.ContentMsg  
-                });   */
-                return Ok();  
-            }  
+            return Ok(user);
         }
     }
+}

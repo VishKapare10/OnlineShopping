@@ -1,0 +1,80 @@
+{
+    "Routes": [
+      {
+        "DownstreamPathTemplate": "/users",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 5001
+          }
+        ],
+        "UpstreamPathTemplate": "/api/users",
+        "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+      },
+      {
+        "DownstreamPathTemplate": "/users/{id}",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 5001
+          }
+        ],
+        "UpstreamPathTemplate": "/api/users/{id}",
+        "UpstreamHttpMethod": [ "GET", "DELETE" ]
+      },
+      {
+        "DownstreamPathTemplate": "/products",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 5002
+          }
+        ],
+        "UpstreamPathTemplate": "/api/products",
+        "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+      },
+      {
+        "DownstreamPathTemplate": "/products/{id}",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 5002
+          }
+        ],
+        "UpstreamPathTemplate": "/api/products/{id}",
+        "UpstreamHttpMethod": [ "GET", "DELETE" ]
+      },
+
+      {
+        "DownstreamPathTemplate": "/customers",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 5003
+          }
+        ],
+        "UpstreamPathTemplate": "/api/customers",
+        "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+      },
+      {
+        "DownstreamPathTemplate": "/customers/{id}",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 5003
+          }
+        ],
+        "UpstreamPathTemplate": "/api/customers/{id}",
+        "UpstreamHttpMethod": [ "GET", "DELETE" ]
+      }
+    ],
+    "GlobalConfiguration": {
+      "BaseUrl": "http://localhost:4000"
+    }
+  }

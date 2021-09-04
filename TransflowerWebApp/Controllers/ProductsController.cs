@@ -44,6 +44,11 @@ namespace TransflowerWebApp.Controllers
             return View();
         }
 
+        public IActionResult AddToCart(int id)
+        {
+            return View();
+        }
+
         //GET Request for insert
         [HttpGet]
         public IActionResult Insert()

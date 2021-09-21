@@ -1,4 +1,5 @@
 var express=require('express');
+const { fstat } = require('fs');
 var app=express(); //Global object
 var path=require('path');
 
@@ -33,7 +34,9 @@ app.get("/api/flowers",function(req,res){
 });
 
 app.get("/api/flowers/:id",function(req,res){
-    res.send(flowers[1]);
+    let id=req.params.id;
+    let f=flowers.find(x=> x.id=id); //arrow function
+    res.send(f);
 });
 
 app.get("/api/customers",function(req,res){
@@ -46,24 +49,24 @@ app.get("/api/customers/:id",function(req,res){
 
 //CRUD Operation
 app.post("/api/flowers",function(req,res){
-        //Add new json object to collection flowers
-        console.log("new object to be appended in the exisiting collection flowers");
         var newFlower=JSON.stringify(req.body);
         flowers.push(req.body); //to insert into json array
         console.log(newFlower);
-        res.send('new object is appended to collection');
-
 });
 
 app.put("/api/flowers/:id", function(req,res){
-        //Update 
-        console.log("existing object of flower to be modified by received object from client");
-        res.send('existing object of flower is replaced by new object received from client');
+        let id=req.params.id;
+        let f=flowers.find(x=> x.id=id);
+        flower=flowers.filter(x=>x.id==id);
+        flower=req.params.body;
+        res.send(flower);
 });
 
 app.delete("/api/flowers/:id", function(req,res){
-         console.log("existing object of flower to be deleted from the collection");
-         res.send('existing object of flower is removed from collection');
+        let id=req.params.id;
+        let f=flowers.find(x=> x.id=id); //arrow function
+        flowers=flowers.filter(x=>x.id!=id);
+        res.send(f);
 });
 
 ////////////////////////////////

@@ -67,5 +67,14 @@ console.log(result);*/
 //ES6: Ecmascript Javascript
 //Arrow function
 let numbers=[1,3,5];
-let result=numbers.every(e=>e>0);
+//lambda expression
+let result=numbers.every(e=>e>0); //e from where e is greater than 0.
 console.log(result);
+
+
+/*let isOdd=numbers.every(function(e){
+    return Math.abs(e%2)==1;
+});*/
+
+let isOdd=numbers.every(e=>Math.abs(e%2==1));
+console.log(isOdd);

@@ -30,15 +30,24 @@ customers.splice(2,0,{"id":30,"firstname":"Swapnil","lastname":"Modi","city":"ne
 //console.log(customers);
 
 //Remove
-customers.length=2;
+/*customers.length=2;
 console.log(customers);
 
 //Remove
 customers.splice(4,0);
 console.log(customers);
+*/
+
+//Remove specific customer
+//let customer=customers.find(x=> x.id=12);
+let upCustomers=customers.filter(x=>x.id!=12);
+console.log(upCustomers);
+
 
 //Update
-let customer=customers.find(x=> x.id=12);
-customer=customers.filter(x=>x.id==12);
-customer={"id":12,"firstname":"Rajiv","lastname":"Patil","city":"delhi","age":29,"email":"rajiv.patil@gmail.com","contactnumber":"9899887651"};
+customers.forEach(customer=>{
+        if(customer.firstname=="Abhay"){
+                customer.contactnumber=7720037983;
+        }
+});
 console.log(customers);

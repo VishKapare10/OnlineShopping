@@ -56,6 +56,30 @@ app.post("/api/flowers",function(req,res){
         console.log(newFlower);
 });
 
+app.post("/api/account",function(req,res){
+        var user=JSON.stringify(req.body);
+        console.log(user);
+});
+
+app.post("/api/login",(req,res)=>{
+        //server side users credentials are verified.
+        var claim=req.body;
+        if(claim.username =="ravi" && claim.password =="seed"){
+             console.log("valid user");
+        }
+        else{
+             console.log("invalid user");
+        }
+        console.log(claim);
+});
+
+app.post("/api/register",(req,res)=>{
+        //server side will add new customer to the customers collection.
+        var customer=req.body;
+        customers.push(customer);
+        console.log(customers);
+});
+
 app.put("/api/flowers/:id", function(req,res){
         //Update
         let id=req.params.id;

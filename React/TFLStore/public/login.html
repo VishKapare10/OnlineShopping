@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html style="background-color:rgb(204, 204, 255);">
+<head>
+   <title>Login </title>
+</head>
+    <body>
+        <form action="/api/login" method="POST">
+           <label>Username : </label><input type="text"name="username" required/>
+           </br/>
+           <label>Password</label><input type="password"name="password" required/>
+           </br/>
+           <hr/>
+           <!---input type="button" value="submit"/>-->
+          <button type="submit">Submit</button>
+        </form>
+        
+        <button onclick="onPushMe()">Push me</button>    
+        <script>
+        var onPushMe=function()
+        {
+            alert("Button is really clicked....");
+        }
+        </script>
+    </body>
+</html>

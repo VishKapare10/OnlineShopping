@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html style="background-color:rgb(204, 204, 255);">
+<head>
+   <title>Contact </title>
+</head>
+    <body>
+        <form action="/api/account" method="POST">
+           <label>First Name: </label><input type="text"name="firstname"/>
+           </br/>
+           <label>Last Name</label><input type="text"name="lastname"/>
+           </br/>
+           <hr/>
+           <!---input type="button" value="submit"/>-->
+          <button type="submit">Submit</button>
+        </form>
+        
+        <button onclick="onPushMe()">Push me</button>    
+        <script>
+        var onPushMe=function()
+        {
+            alert("Button is really clicked....");
+        }
+        </script>
+    </body>
+</html>

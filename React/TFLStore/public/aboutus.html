@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html style="background-color:rgb(204, 204, 255);">
+<head>
+   <title>About Us </title>
+</head>
+      <h1>Transflower Learning Pvt. Ltd.</h1>
+      <h1>Walvekar Nagar,Pune Satara Road, Pune.</h1>
+      <h1>Chied Mentor: Ravi Tambade</h1>
+      <h1>Mobile number: 9881735801</h1>
+      <h1>Email Id: ravi.tambade@transflower.in</h1>
+      <hr/>
+      <p id="ptitle1">Look here...</p>
+      <p id="ptitle2">Look here...</p>
+    <!---Event Binding by registering call back function-->
+    <button onclick="onPing()">ping!</button>
+    <button onclick="onPong()">pong!</button>
+    </body>
+    <script>
+        /*Inline javascript code
+        */
+        //Reusable client side javascript function
+        //Event handler
+        var onPing=function(){
+            console.log("Button is clicked");
+            var person={
+                firstname:'Reena',
+                lastname:'Nene'
+            };
+            var pTitle1=document.getElementById("ptitle1");
+            pTitle1.innerHTML="Ping"; //property
+        }
+        var onPong=function(){
+            console.log("Button is clicked");
+            var person={
+                firstname:'Veena',
+                lastname:'Sharma'
+            };
+            var pTitle1=document.getElementById("ptitle2");
+            pTitle1.innerHTML="Pong"; //property
+        }
+        //DOM
+        //Window //Document //HTML control elements
+    </script>
+</html>

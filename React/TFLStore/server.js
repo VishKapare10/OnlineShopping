@@ -80,11 +80,20 @@ app.post("/api/register",(req,res)=>{
         console.log(customers);
 });
 
-app.put("/api/flowers/:id", function(req,res){
-        //Update
-        let id=req.params.id;
-        flowers=flowers.filter(x=>x.id!=id);
-        flowers.push(req.body);
+app.post("/api/contact",(req,res)=>{
+        //server side  will add new customer to customers collection
+        var requester=req.body;
+        console.log(requester);
+    })
+
+app.put("/api/flowers/:id", function(req, res){
+        let id = req.params.id;
+        for (var i = 0; i < flowers.length; i++)
+        {
+            if (flowers[i].id == id)
+            flowers[i] = req.body;
+        }
+        console.log(req.body);
         res.send(req.body);
 });
 
@@ -106,9 +115,13 @@ app.post("/api/customers",function(req,res){
 });
 
 app.put("/api/customers/:id", function(req,res){
-        let id=req.params.id;
-        customers=customers.filter(x=>x.id!=id);
-        customers.push(req.body);
+        let id = req.params.id;
+        for (var i = 0; i < customers.length; i++)
+        {
+            if (customers[i].id == id)
+            customers[i] = req.body;
+        }
+        console.log(req.body);
         res.send(req.body);
 });
 

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html style="background-image: url('/images/farms.jpg');"></html>
+<head>
+   <title>Transflower Store </title>
+</head>
+    <body>
+       <h1>Retrieve data from local storage </h1>
+       <label>First Name</label><input type="text" id="firstname"/>
+       <br/>
+       <label>Last Name</label><input type="text" id="lastname"/>
+       <br/>
+       <label>City</label><input type="text" id="city"/>
+       <br/>
+
+       <button onClick="onRetrieveData()">Get User Data</button>
+       <script>
+          var onRetrieveData=function(){
+
+            //var theUser=JSON.parse(localStorage.getItem("user"));
+            var theUser=JSON.parse(sessionStorage.getItem("user"));
+            document.getElementById("firstname").value=theUser.firstname;
+            document.getElementById("lastname").value=theUser.lastname;
+            document.getElementById("city").value=theUser.city;
+
+          };
+       </script>
+    </body>
+</html>

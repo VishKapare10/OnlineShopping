@@ -28,7 +28,6 @@
                     html.push(data[i].quantity);
                     html.push("</td>");
                     html.push("<td>");
-                    html.push("")
                     html.push("<a href='/details.html'>Details</a>");
                     html.push("</td>");
                     html.push("</tr>");
@@ -39,11 +38,6 @@
             var div1=document.getElementById("divData");
             div1.innerHTML=html.join('');
             };
-
-            var storeID=(id)=>{
-                console.log(id)
-                sessionStorage.setItem("flowerid",JSON.stringify(id));
-            }
 
             var  readOneData=function(data){
                 var html = [];
@@ -61,7 +55,7 @@
                     html.push("<td>");
                     html.push(data.quantity);
                     html.push("</td>");
-                    html.push("</tr>"); 
+                    html.push("</tr>");
         
             html.push("</table>");
             document.getElementById("pId").innerHTML=JSON.stringify(data);
@@ -113,7 +107,7 @@
             var onGetById=function(){
 
             // get the id selected from session stroage
-            var id=sessionStorage.getItem("flowerid");
+            var id=1;
                 // This function will fetch data from above url
             $.ajax({
                 url:dataUrl+"/"+ id,  // which url

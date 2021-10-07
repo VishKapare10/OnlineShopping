@@ -1,7 +1,7 @@
             //first fetch data from server
             //url  http://localhost:9898/api/flowers
             
-            // PRC : Remote Procedural Call
+            //RPC : Remote Procedural Call
             //ready made API provided by one standard javascript library
             //Library : jQuery 
             //set of reusable  javascript functions

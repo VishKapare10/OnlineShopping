@@ -10,16 +10,45 @@ var sql=require('./mysqlconnect');
 // update task set ........ where id ...
 // delete from task where id=....
 
+//Business object
+//Constructor
+//Object is real world instance which has state, behaviour and identity
+var Task=function(task){
+    this.task=task.task;        //attribute
+    this.status=task.status;    //attribute
+    this.created_at=new Date(); //attribute
+    this.owner="Ravi Tamdade";
+    this.company="Transflower";
+};
 
-/*  // code to fetch all records
- sql.query('SELECT * FROM tap.tasks;',function (err, result, fields) {
-    if (err) throw err;
-    console.log(result);
-    console.log("//**************************************");
-    //console.log(fields);
-  }) */
+Task.createTask=function(){
+
+};
+
+Task.getAllTasks=function(result){
+    // code to fetch all records
+    sql.query('SELECT * FROM tap.tasks;',function (err, result, fields) {
+      if (err)
+        console.log("error:"+err);
+        result(err,null);
+      console.log(result);
+    })
+};
+
+Task.getById=function(){
+
+};
+
+Task.update=function(){
+
+};
+
+Task.remove=function(){
+
+};
+
  
-/* 
+
   // code  to fetch particular record
   sql.query('select  * from tasks where id=3',function (err, result, fields) {
     if (err) throw err;
@@ -37,7 +66,7 @@ var sql=require('./mysqlconnect');
             function (err, result, fields) {
                 if (err) throw err;
                 console.log(result);
-    }) */
+    })
 
      //Code to insert into existing recrod
      sql.query("INSERT INTO tap.tasks (id,task, status, created_at) VALUES (9,'Fix bugs',1,'2021-10-7 11:19:01')",
@@ -46,3 +75,4 @@ var sql=require('./mysqlconnect');
          console.log(result); 
      }) 
 
+module.exports=Task;

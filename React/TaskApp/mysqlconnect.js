@@ -1,6 +1,5 @@
-
-// database connectivity 
-
+//a seperate responsibility for mysql connection string
+//database connectivity 
 var mysql=require('mysql');
 
 var connection=mysql.createConnection({
@@ -9,7 +8,6 @@ var connection=mysql.createConnection({
     password:'Alpha@123',
     database:'tap'
 });
-
 connection.connect(function(err){
 
     //Runtime Error handling (Exception handling)

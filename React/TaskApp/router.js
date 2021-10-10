@@ -1,15 +1,18 @@
-//API routes for Controller callback functions
-var taskController=require('./taskcontroller');
+// API routes for Controller callback functions
+//a Separate responsibility  for navigation
+
+var taskController=require("./controllers/taskcontroller");
 
 module.exports=function(app){
+//mapping code for different HTTP requests 
 
-    //mapping code for diffrent HTTP requests
-    app.route("/task")
-        .get(taskController.getAll)
-        .post(taskController.insert);
+app.route("/tasks")
+    .get(taskController.getAll)
+    .post(taskController.insert);
 
-    app.route("/tasks/:id")
-        .get(taskController.getBy)
-        .put(taskController.update)
-        .delete(taskController.remove);
-}
+app.route('/tasks/:id')
+    .get(taskController.getBy)
+    .put(taskController.update)
+    .delete(taskController.remove);
+};
+// MVC ( Model View Controller)

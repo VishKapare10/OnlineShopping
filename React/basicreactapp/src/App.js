@@ -5,6 +5,7 @@ import Home from './home';
 import List from './List';
 import Dashboard from './Dashboard';
 import Flower from './flower';
+import Aboutus from './aboutus';
 
 
 // What is this App
@@ -23,6 +24,8 @@ function App() {
       <hr/>
       <h3>Todays fresh flower</h3>
       <List></List>
+      <hr/>
+      <Aboutus></Aboutus>
     </div>
   );
 }

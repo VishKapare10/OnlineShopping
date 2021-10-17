@@ -6,6 +6,7 @@ import List from './List';
 import Dashboard from './Dashboard';
 import Flower from './flower';
 import Aboutus from './aboutus';
+import Contactus  from './contactus';
 
 
 // What is this App
@@ -26,6 +27,8 @@ function App() {
       <List></List>
       <hr/>
       <Aboutus></Aboutus>
+      <hr/>
+      <Contactus></Contactus>
     </div>
   );
 }

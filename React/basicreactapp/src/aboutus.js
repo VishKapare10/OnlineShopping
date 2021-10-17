@@ -2,9 +2,9 @@
 function Aboutus(){
     return(
             <div>
-                <h1>Transflower Learning Pvt. Ltd.</h1>
-                <p>Walvekar nagar, Pune Satara Road, Pune</p>
-                <p>Email: learning@transflower.in</p>
+                <h2>About Us:</h2>
+                <p>Online Learning Center</p>
+                <p>Doing ordinary things extraordinarily</p>
             </div>
     );
 }

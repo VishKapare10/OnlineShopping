@@ -6,6 +6,9 @@ import data from './data/products.json';
 
  class  List extends React.Component{
      
+    //JSX Syntax
+    //React developer writes declarative code  for defining rendering logic
+    //This rendering logic going to be processed by React DOM
     render(){
 
             const flowers=data;
@@ -20,7 +23,8 @@ import data from './data/products.json';
                                                         description={item.description}
                                                         imageurl={item.imageurl}
                                                         unitprice={item.unitprice}
-                                                        quantity={item.quantity} /> 
+                                                        quantity={item.quantity}
+                                                        likes={item.likes} /> 
                                     </li>
                                 ))  
                         }

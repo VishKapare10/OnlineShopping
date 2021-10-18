@@ -1,6 +1,6 @@
 
 import React from 'react';
-
+import Counter from './Counter';
 
 class Product  extends React.Component{
 
@@ -11,8 +11,10 @@ class Product  extends React.Component{
                 <p>Description:{this.props.description}</p>
                 <p>Unit Price:{this.props.unitprice}</p>
                 <p>Quantity:{this.props.quantity}</p>
+                <p>Likes:{this.props.likes}</p>
                 <br/>
                 <button>Add to Cart</button>
+                <Counter count={this.props.likes}></Counter>
             </div>
  }
 }

@@ -9,8 +9,6 @@ import Aboutus from './aboutus';
 import Contactus  from './contactus';
 
 
-// What is this App
-// This is React Component
 function App() {
   return (
     <div className="App">
@@ -34,9 +32,4 @@ function App() {
 }
 
 export default App;
-
-
-  // Divide and rule
-  // SOC
-  // Loosely coupled , highly cohesive 
 

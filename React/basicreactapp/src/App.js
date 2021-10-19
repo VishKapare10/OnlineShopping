@@ -8,17 +8,15 @@ import Dashboard from './ProductCatalog/Dashboard';
 import Aboutus from './CRM/aboutus';
 import Contactus  from './CRM/contactus';
 import Login  from './Membership/Login';
+import Company from './Membership/Company';
 
 
 function App() {
   return (
     <div className="App">
-       <ol>
-        <li>Welcome to Application Component</li>
-        <li>This is Component based Approch for defining UI</li>
-      </ol>
-      <hr/>
       <Login></Login>
+      <hr/>
+      <Company></Company>
       {/* <Home></Home>
       <hr/>
       <Dashboard></Dashboard>

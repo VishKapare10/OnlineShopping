@@ -34,7 +34,7 @@ class Login extends React.Component{
                                 console.log("Invalid user");
                             }
 
-                        }}>Login</button>
+                        }} class="btn btn-success">Login</button>
                 </div>
         }
 }

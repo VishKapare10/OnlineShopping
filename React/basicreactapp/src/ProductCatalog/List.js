@@ -14,7 +14,7 @@ import data from '../data/products.json';
             const flowers=data;
 
         return <div>  
-                    <h3>Todays fresh flowers....</h3>   
+                    <h3>Todays fresh flowers</h3>
                     <ul>
                         {
                             flowers.map(item=>(

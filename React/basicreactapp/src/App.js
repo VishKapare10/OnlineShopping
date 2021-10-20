@@ -47,22 +47,21 @@ function Home(){
       <div>
            <div className="jumbotron text-center">
               <h2>Transflower Learning Pvt.Ltd.</h2>
-              <p>Mentor as a Service</p>
-              <p>React JS Learning is a fun</p>
+              <i>Mentor as a Service</i>
            </div>
            <div className="container">
               <div className="row">
                   <div className="col-sm-4">
                     <h2>Flowers</h2>
-                    <p>Celebrate every moment with flowers</p>
+                    <i>Celebrate every moment with flowers</i>
                   </div>
                   <div className="col-sm-4">
                     <h2>Fruits</h2>
-                    <p>Enjoy healthy life using fresh fruits</p>
+                    <i>Enjoy healthy life using fresh fruits</i>
                   </div>
                   <div className="col-sm-4">
                     <h2>Vegetables</h2>
-                    <p>Increase immunity with our fresh vegetables</p>
+                    <i>Increase immunity with our fresh vegetables</i>
                   </div>
               </div>
            </div>
@@ -73,12 +72,12 @@ function Home(){
 
 function About(){
   return(
-    <div>
-        <h2>About Us:</h2>
-        <h2>Transflower Learning Pvt.Ltd.</h2>
-        <p>Online Learning Center</p>
-        <p>601,Rama Apartment, Walvekar Nagar,Pune</p>
-        <p>Doing ordinary things extraordinarily</p>
+    <div className="jumbotron text-center">
+        <h2>About Us</h2>
+        <hr/>
+        <h3>Transflower Learning Pvt.Ltd.</h3>
+        <i>Online Learning Center</i><br/>
+        <i>Doing ordinary things extraordinarily</i>
     </div>
 );
 }
@@ -86,8 +85,9 @@ function About(){
 
 function Contact(){
   return(
-    <div> 
-        <h2>Contact Us:</h2>
+    <div className="jumbotron text-center">
+        <h2>Contact Us</h2>
+        <hr/>
         <p>Address:</p>
         <p>Transflower Learning Pvt. Ltd.</p>
         <p>Walvekar nagar, Pune Satara Road, Pune</p>

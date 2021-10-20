@@ -5,13 +5,14 @@ class Login extends React.Component{
         constructor(props){
             super(props);
             this.state={
-                username:"vishk",
-                password:"emp1"
+                username:"",
+                password:""
             }        
         }
         render(){
-            return <div>
+            return  <div className="jumbotron text-center">
                         <h2>Login</h2>
+                        <hr/>
                         <label>Username</label><input type="text" onChange={
                                         (event)=>{
                                             this.setState({username:event.target.value})
@@ -25,16 +26,14 @@ class Login extends React.Component{
                         }
                         value={this.state.password}/><br/>
                         <button onClick={()=>{
-                            //Check the credentials of user
-                            //Check username and password
-                            if(this.state.username="vishk" && this.state.password=="emp1"){
-                                console.log("valid user");
+                               if(this.state.username=="vishk" & this.state.password=="alpha@9999"){
+                                   console.log("Valid User")
+                               }
+                               else{
+                                console.log("Invalid User");
+                               }
                             }
-                            else{
-                                console.log("Invalid user");
-                            }
-
-                        }} class="btn btn-success">Login</button>
+                } class="btn btn-success">Login</button>
                 </div>
         }
 }

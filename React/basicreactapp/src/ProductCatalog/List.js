@@ -11,7 +11,7 @@ import data from '../data/products.json';
     //This rendering logic going to be processed by React DOM
     render(){
 
-            const flowers=data;
+        const flowers=data;
 
         return <div>  
                     <h3>Todays fresh flowers</h3>

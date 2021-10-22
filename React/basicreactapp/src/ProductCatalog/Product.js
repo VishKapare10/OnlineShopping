@@ -16,6 +16,7 @@ constructor(props){
  }
  render(){
     return <div>
+                <p>Id: {this.props.id}</p>
                 <p>Title: {this.props.title}</p>
                 <img src= {this.props.imageurl} width="100" height="100"/>
                 <p>Description:{this.props.description}</p>

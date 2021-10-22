@@ -10,19 +10,12 @@ import data from '../data/products.json';
 
 
     }
-    // after construction and before rendersing
-    // we have to fetch data from rest api
-    // and populate into the state of component
+ 
     // Component Life Cycle
     //Initialization  event
      componentDidMount(){
 
-        //Polymorphsim
-        // attach polymorphic behaviour by overriding parent behaviour
-        //Late  Binding
-        //changing the behaviour of object from base class behaviour
-        //overriding
-        //invoke you data from rest api
+        //Invoke you data from rest api
         const url='http://localhost:8000/api/flowers'
         fetch(url)
             .then(
@@ -34,6 +27,7 @@ import data from '../data/products.json';
                         return Promise.reject(error);
                     }
                     this.setState({products:data})
+                    console.log(data);
                 })
             .catch(error=>{
                 console.log(`Error occured: ${error}`);
@@ -48,11 +42,12 @@ import data from '../data/products.json';
                         {
                             this.state.products.map(item=>(
                                     <li>
-                                        <Product title={item.title}
-                                                description={item.description}
+                                        <Product id={item.Id} 
+                                                title={item.Title}
+                                                description={item.Description}
                                                 imageurl={item.imageurl}
-                                                unitprice={item.unitprice}
-                                                quantity={item.quantity}
+                                                unitprice={item.UnitPrice}
+                                                quantity={item.Quantity}
                                                 likes={item.likes} /> 
                                     </li>
                                 ))  

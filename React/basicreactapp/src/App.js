@@ -11,6 +11,7 @@ import Dashboard from './ProductCatalog/Dashboard';
 import Login  from './Membership/Login';
 //import Register from './Membership/Register';
 import Registerf from './Membership/Registerf';
+import RestList from './ProductCatalog/RestList';
 
 function App() {
   return (

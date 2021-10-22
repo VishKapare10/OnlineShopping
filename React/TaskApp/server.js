@@ -8,6 +8,6 @@ app.use(express.json());
 var routes = require('./router'); //importing route
 routes(app); //register the route
 var onListen=function(){
-  console.log("server is listening on port 3000")
+  console.log("server is listening on port 8000")
 }
-app.listen(3000,onListen);
+app.listen(8000,onListen);

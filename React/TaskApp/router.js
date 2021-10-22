@@ -16,11 +16,11 @@ app.route('/tasks/:id')
     .put(taskController.update)
     .delete(taskController.remove);
 
-app.route("/flowers")
+app.route("/api/flowers")
     .get(flowersController.getAll)
     .post(flowersController.insert);
 
-app.route('/flowers/:id')
+app.route('/api/flowers/:id')
     .get(flowersController.getBy)
     .put(flowersController.update)
     .delete(flowersController.remove);

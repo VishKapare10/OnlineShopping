@@ -12,6 +12,7 @@ import Login  from './Membership/Login';
 //import Register from './Membership/Register';
 import Registerf from './Membership/Registerf';
 import RestList from './ProductCatalog/RestList';
+import Enquiry from './Membership/Enquiry';
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function BasicRouting(){
           <div>
               <h1>Transflower Store</h1>
               <Router>
-                <Link to="/">Home</Link> | <Link to="/about">About us</Link> | <Link to="/contact">Contact us</Link> | <Link to="/flowers">Flowers</Link> | <Link to="/Login">Login</Link> | <Link to="/register">Register</Link>
+                <Link to="/">Home</Link> | <Link to="/about">About us</Link> | <Link to="/contact">Contact us</Link> | <Link to="/flowers">Flowers</Link> | <Link to="/Login">Login</Link> | <Link to="/register">Register</Link> | <Link to="/enquiry">Enquiry</Link>
                 <hr/>
                 <Switch>
                   <Route exact path="/"><Home/></Route>
@@ -37,6 +38,7 @@ function BasicRouting(){
                   <Route exact path="/flowers"><List/></Route>
                   <Route exact path="/login"><Login /></Route>
                   <Route exact path="/register"><Registerf /></Route>
+                  <Route exact path="/enquiry"><Enquiry /></Route>
                 </Switch>
               </Router>
           </div>

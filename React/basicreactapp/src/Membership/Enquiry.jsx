@@ -24,10 +24,10 @@ class Enquiry extends React.Component{
                     value={this.state.name}/><br/>
                     <label>Contact Number</label><br/><input type="tel" onChange={
                                         (event)=>{
-                                            this.setState({contactperson:event.target.value})
+                                            this.setState({contactno:event.target.value})
                                         }      
                         }
-                    value={this.state.contactperson}/><br/>
+                    value={this.state.contactno}/><br/>
                      <label>Location</label><br/><input type="text" onChange={
                                         (event)=>{
                                             this.setState({location:event.target.value})
@@ -36,12 +36,12 @@ class Enquiry extends React.Component{
                     value={this.state.location}/><br/>
                      <label>Email</label><br/><input type="email" onChange={
                                         (event)=>{
-                                            this.setState({website:event.target.value})
+                                            this.setState({email:event.target.value})
                                         }      
                         }
-                    value={this.state.website}/><br/>
+                    value={this.state.email}/><br/>
                     <button type="submit" onClick={()=>{
-                                      console.log("Your response has been submitted.");
+                                      console.log("Your response has been submitted");
                         }} class="btn btn-success">Submit</button>
                     </form>
                    </div>

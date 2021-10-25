@@ -13,6 +13,7 @@ import Login  from './Membership/Login';
 import Registerf from './Membership/Registerf';
 import RestList from './ProductCatalog/RestList';
 import Enquiry from './Membership/Enquiry';
+import MyOrders from './OrderProcessing/MyOrders';
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function BasicRouting(){
           <div>
               <h1>Transflower Store</h1>
               <Router>
-                <Link to="/">Home</Link> | <Link to="/about">About us</Link> | <Link to="/contact">Contact us</Link> | <Link to="/flowers">Flowers</Link> | <Link to="/Login">Login</Link> | <Link to="/register">Register</Link> | <Link to="/enquiry">Enquiry</Link>
+                <Link to="/">Home</Link> | <Link to="/about">About us</Link> | <Link to="/contact">Contact us</Link> | <Link to="/flowers">Flowers</Link> | <Link to="/Login">Login</Link> | <Link to="/register">Register</Link> | <Link to="/enquiry">Enquiry</Link> | <Link to="/orders">My Orders</Link>
                 <hr/>
                 <Switch>
                   <Route exact path="/"><Home/></Route>
@@ -39,6 +40,7 @@ function BasicRouting(){
                   <Route exact path="/login"><Login /></Route>
                   <Route exact path="/register"><Registerf /></Route>
                   <Route exact path="/enquiry"><Enquiry /></Route>
+                  <Route exact path="/orders"><MyOrders /></Route>                  
                 </Switch>
               </Router>
           </div>

@@ -1,4 +1,4 @@
-# Online Shopping Application
+### Online Shopping Application
 <h2> Full Stack Application in Dotnet Core 5.0 and React JS <h2>
 <h2>✔️ .NET Core 5.0</h2>
 

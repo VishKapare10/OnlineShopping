@@ -1,7 +1,5 @@
 ### Online Shopping Application
-<br>
-   <ul><br/>Full Stack Application in Dotnet Core 5.0 and React JS<ul>
-<br/>
+<p>Full Stack Application in Dotnet Core 5.0 and React JS</p>
 ✔️ .NET Core 5.0
 
 ### Languages and Tools:

@@ -1,0 +1,18 @@
+@using DemoApp.Models;
+@{
+    ViewData["Title"] = "session Policy";
+}
+<h1>@ViewData["Title"]</h1>
+<p>Use this page to show Session data.</p>
+<p>Product = @ViewBag.data</p>
+<p>Age = @ViewBag.age</p>
+
+<hr/>
+<h3>Session Data </h3>
+
+@{
+    Cart theCart=ViewData["cart"] as Cart;
+    foreach( Item item in theCart.Items ){
+        <p>@item.theFlower.Name   @item.Quantity </p>
+    }
+}

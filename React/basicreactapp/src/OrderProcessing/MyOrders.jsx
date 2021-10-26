@@ -1,5 +1,5 @@
 import React from 'react';
-import Product from './Product';
+import Orders from './Orders';
  
  class  RestList extends React.Component{
     constructor(props){
@@ -8,9 +8,7 @@ import Product from './Product';
     }
  
      componentDidMount(){
-
-        //Invoke you data from rest api
-        const url='http://localhost:8000/api/flowers'
+        const url='http://localhost:4000/api/orders';
         fetch(url)
             .then(
                 async response=>{
@@ -31,18 +29,18 @@ import Product from './Product';
     render(){
 
        return <div>  
-                    <h3>Active Orders</h3>   
+                    <h2>Active Orders</h2>
+                    <hr/> 
                     <ul>
                         {
-                            this.state.products.map(item=>(
+                            this.state.orders.map(item=>(
                                     <li>
-                                        <Product id={item.Id} 
-                                                title={item.Title}
-                                                description={item.Description}
-                                                imageurl={item.imageurl}
-                                                unitprice={item.UnitPrice}
-                                                quantity={item.Quantity}
-                                                likes={item.likes} /> 
+                                        <Orders id={item.id} 
+                                                CustomerId={item.customerId}
+                                                TotalAmount={item.totalAmount}
+                                                Status={item.status}
+                                                OrderDate={item.orderDate}
+                                                /> 
                                     </li>
                                 ))  
                         }

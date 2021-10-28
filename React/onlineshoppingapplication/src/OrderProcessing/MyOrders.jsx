@@ -29,7 +29,7 @@ import Orders from './Orders';
     render(){
 
        return <div>  
-                    <h2>Active Orders</h2>
+                    <h2>Orders</h2>
                     <hr/> 
                     <ul>
                         {

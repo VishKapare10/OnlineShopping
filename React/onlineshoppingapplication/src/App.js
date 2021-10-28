@@ -30,7 +30,7 @@ function BasicRouting(){
           <div>
               <h1>Transflower Store</h1>
               <Router>
-                <Link to="/">Home</Link> | <Link to="/about">About us</Link> | <Link to="/contact">Contact us</Link> | <Link to="/flowers">Flowers</Link> | <Link to="/Login">Login</Link> | <Link to="/register">Register</Link> | <Link to="/enquiry">Enquiry</Link> | <Link to="/orders">My Orders</Link>
+                <Link to="/">Home</Link> | <Link to="/about">About us</Link> | <Link to="/contact">Contact us</Link> | <Link to="/flowers">Flowers</Link> | <Link to="/Login">Login</Link> | <Link to="/register">Register</Link> | <Link to="/enquiry">Enquiry</Link> | <Link to="/orders">Orders</Link>
                 <hr/>
                 <Switch>
                   <Route exact path="/"><Home/></Route>

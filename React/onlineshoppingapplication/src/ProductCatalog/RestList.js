@@ -7,8 +7,6 @@ import data from '../data/products.json';
     constructor(props){
         super(props);
         this.state={ products:[] };
-
-
     }
  
     // Component Life Cycle

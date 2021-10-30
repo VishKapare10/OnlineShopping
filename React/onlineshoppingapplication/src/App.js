@@ -14,6 +14,7 @@ import Registerf from './Membership/Registerf';
 import RestList from './ProductCatalog/RestList';
 import Enquiry from './Membership/Enquiry';
 import MyOrders from './OrderProcessing/MyOrders';
+import Cart from './Cart/Cart';
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function BasicRouting(){
           <div>
               <h1>Transflower Store</h1>
               <Router>
-                <Link to="/">Home</Link> | <Link to="/about">About us</Link> | <Link to="/contact">Contact us</Link> | <Link to="/flowers">Flowers</Link> | <Link to="/Login">Login</Link> | <Link to="/register">Register</Link> | <Link to="/enquiry">Enquiry</Link> | <Link to="/orders">Orders</Link>
+                <Link to="/">Home</Link> | <Link to="/about">About us</Link> | <Link to="/contact">Contact us</Link> | <Link to="/flowers">Flowers</Link> | <Link to="/Login">Login</Link> | <Link to="/register">Register</Link> | <Link to="/enquiry">Enquiry</Link> | <Link to="/orders">Orders</Link> | <Link to="/cart">Cart</Link>  
                 <hr/>
                 <Switch>
                   <Route exact path="/"><Home/></Route>
@@ -40,7 +41,8 @@ function BasicRouting(){
                   <Route exact path="/login"><Login /></Route>
                   <Route exact path="/register"><Registerf /></Route>
                   <Route exact path="/enquiry"><Enquiry /></Route>
-                  <Route exact path="/orders"><MyOrders /></Route>                  
+                  <Route exact path="/orders"><MyOrders /></Route>
+                  <Route exact path="/cart"><Cart /></Route>                  
                 </Switch>
               </Router>
           </div>

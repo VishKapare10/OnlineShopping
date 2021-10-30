@@ -10,9 +10,18 @@ constructor(props){
     this.handler=this.handler.bind(this); //bind handler
 }
  handler(data){
-     console.log("Parent function is invoked...");
      console.log(data);
      this.setState({likes:data});
+ }
+ onSaveData(){
+    console.log("Button clicked to save data");
+    var cartItem={
+            title: this.props.title,
+            unitPrice: this.props.unitprice,
+            quantity: this.props.quantity   
+    };
+    console.log(cartItem);
+    sessionStorage.setItem("cartItem",JSON.stringify(cartItem));
  }
  render(){
     return <div>
@@ -24,7 +33,7 @@ constructor(props){
                 <p>Quantity:{this.props.quantity}</p>
                 <p>Likes:{this.state.likes}</p>
                 <br/>
-                <button>Add to Cart</button>
+                <button onClick={this.onSaveData()} class="btn btn-success">Add to Cart</button>
                 <Counter count={this.props.likes} handler={this.handler}></Counter>
             </div>
  }

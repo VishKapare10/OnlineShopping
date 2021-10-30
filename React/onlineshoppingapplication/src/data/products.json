@@ -10,7 +10,7 @@
     {"id": 19,"title": "Tulip","imageurl":"/images/tulip.jpg","description": "Silsila flower","unitprice": 10,"quantity":35000,"likes":76000},
     {"id": 20,"title": "Daisy","imageurl":"/images/daisy.jpg","description": "Swiss flower","unitprice":76,"quantity":8000,"likes":760},
     {"id": 21,"title": "Orchid","imageurl":"/images/orchid.jpg","description": "Delicate flower","unitprice": 56,"quantity":35000,"likes":76000},
-    {"id": 22,"title": "Dahlia","imageurl":"/images/dahlia.jpg","description": "Pink flower","unitprice":45,"quantity":85000,"likes":76000}
+    {"id": 22,"title": "Dahlia","imageurl":"/images/dahlia.jpg","description": "Pink flower","unitprice":10,"quantity":850,"likes":76000}
 
 
 

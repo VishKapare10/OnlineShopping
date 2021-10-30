@@ -11,7 +11,6 @@ class Cart extends React.Component{
     componentDidMount(){
         var cartItem=JSON.parse(sessionStorage.getItem("cartItem"));
         if (cartItem != null){
-            console.log(cartItem.title);
             this.setState({title : cartItem.title});
             this.setState({unitprice : cartItem.unitPrice});
             this.setState({quantity : cartItem.quantity});

@@ -12,7 +12,7 @@ class Cart extends React.Component{
         var cartItem=JSON.parse(sessionStorage.getItem("cartItem"));
         if (cartItem != null){
             this.setState({title : cartItem.title});
-            this.setState({unitprice : cartItem.unitPrice});
+            this.setState({unitprice : cartItem.unitprice});
             this.setState({quantity : cartItem.quantity});
         }
         

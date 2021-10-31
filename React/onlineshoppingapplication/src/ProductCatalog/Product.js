@@ -13,16 +13,6 @@ constructor(props){
      console.log(data);
      this.setState({likes:data});
  }
- onSaveData(){
-    console.log("Button clicked to save data");
-    var cartItem={
-            title: this.props.title,
-            unitPrice: this.props.unitprice,
-            quantity: this.props.quantity   
-    };
-    console.log(cartItem);
-    sessionStorage.setItem("cartItem",JSON.stringify(cartItem));
- }
  render(){
     return <div>
                 <p>Id: {this.props.id}</p>
@@ -33,7 +23,14 @@ constructor(props){
                 <p>Quantity:{this.props.quantity}</p>
                 <p>Likes:{this.state.likes}</p>
                 <br/>
-                <button onClick={this.onSaveData()} class="btn btn-success">Add to Cart</button>
+                <button onClick={()=>{
+                    var cartItem={
+                        title: this.props.title,
+                        unitprice: this.props.unitprice,
+                        quantity: this.props.quantity
+                    };
+                    sessionStorage.setItem("cartItem",JSON.stringify(cartItem));
+                }} class="btn btn-success">Add to Cart</button>
                 <Counter count={this.props.likes} handler={this.handler}></Counter>
             </div>
  }

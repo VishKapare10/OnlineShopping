@@ -1,0 +1,14 @@
+{
+  "name": "tflstore",
+  "version": "1.0.0",
+  "description": "This is simple web app using express js framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vishwambhar Kapare",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

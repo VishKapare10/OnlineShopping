@@ -1,0 +1,33 @@
+body {
+    background-color: lightblue;
+}
+
+h1{color:darkred;}
+p{
+    color:indigo;
+    font-size: medium;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.container{
+    background-color: blue;
+    font-style: italic;
+}
+
+.transflower{
+    background-color: yellow;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.seed{
+    background-color: rgb(129, 167, 218);
+    font-family: fantasy;
+}
+
+div{
+    border: 3px solid black;
+    background-color: lightblue;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+}

@@ -1,5 +1,5 @@
 {
-  "name": "tflstore",
+  "name": "EStoreApp",
   "version": "1.0.0",
   "description": "This is simple web app using express js framework",
   "main": "index.js",

@@ -20,8 +20,8 @@ jobs:
         
     - run: ls -l
     - name: Restore dependencies
-      run: cd RecruitmentApp && dotnet restore
+      run: cd TransflowerWebApp && dotnet restore
     - name: Build
-      run: cd RecruitmentApp && dotnet build --no-restore
+      run: cd TransflowerWebApp && dotnet build --no-restore
     - name: Test
-      run: cd RecruitmentApp && dotnet test --no-build --verbosity normal
+      run: cd TransflowerWebApp && dotnet test --no-build --verbosity normal

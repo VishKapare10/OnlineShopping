@@ -20,5 +20,16 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 5.0.x
+
+    - name: list
+      run: ls -l
     
-    - run: ls -l
+    - name: Restore dependencies
+      run: cd TransflowerWebApp && dotnet restore
+
+    - name: Build
+      run: cd TransflowerWebApp && dotnet build --no-restore
+
+    - name: Test
+      run: cd TransflowerWebApp && dotnet test --no-build --verbosity normal
+    

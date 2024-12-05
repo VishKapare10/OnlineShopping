@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html style="background-color:rgb(204, 204, 255);">
+<head>
+   <title>Register Customer</title>
+</head>
+    <body>
+        <h2>New Customer Registration </h2>
+        </hr>
+        <form action="/api/register" method="POST">
+          <table>
+            <tr>
+                <td>Id</td>
+                <td><input type="number" name="id" required/></td>
+            </tr>
+            <tr>
+                <td>First Name</td>  
+                <td><input type="text" name="firstname"required/></td>
+            </tr>
+            <tr>
+                <td>Lastname</td>
+                <td><input type="text" name="lastname"required/></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" name="email"required/></td>
+            </tr>
+            <tr>
+                <td>Contact Number</td>
+                <td><input type="text" name="phoneno"required/></td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td><button type="submit">Submit</button></td>
+            </tr>
+          </table>
+        </form>
+        
+
+    </body>
+</html>

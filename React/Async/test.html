@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<h1>Accessing data</h1>
+<script>
+//Error handling code in javascript
+class HttpError extends Error{
+        constructor(response){
+                super(`${response.status} for ${response.url}`);
+                this.name="HttpError";
+                this.response=response;
+        }
+}
+
+function loadJson(url){
+        return fetch(url).then(response=>{
+                if(response.status==200){
+                        return response.json();
+                }
+                else{
+                        throw new HttpError(response);
+                }
+        });
+}
+
+function demoGithubUser(){
+        let name=prompt("Enter a name?","VishKapare10")
+        loadJson(`https://api.github.com/users/${name}`)
+        .then(user=>{
+                console.log(`name: ${user.name}.`);
+                console.log(`bio: ${user.bio}.`);
+                console.log(`login: ${user.login}.`);
+                console.log(`${JSON.stringify(user)}.`);
+                return user;
+        })
+        .catch(err=>{
+                if(err instanceof HttpError && err.response.status==404){
+                        console.log("No such error");
+                }
+                
+        });
+};
+
+demoGithubUser();
+</script>
